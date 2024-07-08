@@ -17,11 +17,12 @@
     "Star1_7": 15,
     "Star1_8": 16,
     "Star1_9": 17,
-    "TextCanvas1": 5
+    "TextCanvas1": 5,
+    "Timer1": 19
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/08/2024 22:49:28",
+  "HeaderLastSavedDateTimeUTC": "07/08/2024 22:51:23",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": true,
@@ -36,7 +37,8 @@
   },
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "star": 0
+    "star": 1,
+    "timer": 0
   },
   "OverridablePropertiesEntry": {
     "App": {},
@@ -54,7 +56,8 @@
     "Star1_7": {},
     "Star1_8": {},
     "Star1_9": {},
-    "TextCanvas1": {}
+    "TextCanvas1": {},
+    "Timer1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {
@@ -89,7 +92,8 @@
     "Star1_7": 8,
     "Star1_8": 9,
     "Star1_9": 10,
-    "TextCanvas1": 0
+    "TextCanvas1": 0,
+    "Timer1": 0
   },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
