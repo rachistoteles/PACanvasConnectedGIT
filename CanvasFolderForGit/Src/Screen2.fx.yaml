@@ -15,7 +15,7 @@ Screen2 As screen:
     Star1_1 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 200
+        Visible: =Timer1.Value >= 110
         X: =75
         Y: =60
         ZIndex: =3
@@ -23,7 +23,7 @@ Screen2 As screen:
     Star1_2 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 300
+        Visible: =Timer1.Value >= 120
         X: =95
         Y: =80
         ZIndex: =4
@@ -31,7 +31,7 @@ Screen2 As screen:
     Star1_3 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 400
+        Visible: =Timer1.Value >= 130
         X: =115
         Y: =100
         ZIndex: =5
@@ -39,7 +39,7 @@ Screen2 As screen:
     Star1_4 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 500
+        Visible: =Timer1.Value >= 140
         X: =135
         Y: =120
         ZIndex: =6
@@ -47,7 +47,7 @@ Screen2 As screen:
     Star1_5 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 600
+        Visible: =Timer1.Value >= 150
         X: =155
         Y: =140
         ZIndex: =7
@@ -55,7 +55,7 @@ Screen2 As screen:
     Star1_6 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 700
+        Visible: =Timer1.Value >= 160
         X: =175
         Y: =160
         ZIndex: =8
@@ -63,7 +63,7 @@ Screen2 As screen:
     Star1_7 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 800
+        Visible: =Timer1.Value >= 170
         X: =195
         Y: =180
         ZIndex: =9
@@ -71,7 +71,7 @@ Screen2 As screen:
     Star1_8 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 900
+        Visible: =Timer1.Value >= 180
         X: =215
         Y: =200
         ZIndex: =10
@@ -79,7 +79,7 @@ Screen2 As screen:
     Star1_9 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 1000
+        Visible: =Timer1.Value >= 190
         X: =235
         Y: =220
         ZIndex: =11
@@ -87,10 +87,162 @@ Screen2 As screen:
     Star1_10 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =Timer1.Value >= 1100
-        X: =235
-        Y: =220
+        Visible: =Timer1.Value >= 200
+        X: =255
+        Y: =240
         ZIndex: =12
+
+    Star1_11 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 210
+        X: =275
+        Y: =260
+        ZIndex: =13
+
+    Star1_12 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 220
+        X: =295
+        Y: =280
+        ZIndex: =14
+
+    Star1_13 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 230
+        X: =315
+        Y: =300
+        ZIndex: =15
+
+    Star1_14 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 240
+        X: =335
+        Y: =320
+        ZIndex: =16
+
+    Star1_15 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 250
+        X: =355
+        Y: =340
+        ZIndex: =17
+
+    Star1_16 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 260
+        X: =375
+        Y: =360
+        ZIndex: =18
+
+    Star1_17 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 270
+        X: =395
+        Y: =380
+        ZIndex: =19
+
+    Star1_18 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 280
+        X: =415
+        Y: =400
+        ZIndex: =20
+
+    Star1_19 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 290
+        X: =435
+        Y: =420
+        ZIndex: =21
+
+    Star1_20 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 300
+        X: =455
+        Y: =440
+        ZIndex: =22
+
+    Star1_21 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 310
+        X: =475
+        Y: =460
+        ZIndex: =23
+
+    Star1_22 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 320
+        X: =495
+        Y: =480
+        ZIndex: =24
+
+    Star1_23 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 330
+        X: =515
+        Y: =500
+        ZIndex: =25
+
+    Star1_24 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 340
+        X: =535
+        Y: =520
+        ZIndex: =26
+
+    Star1_25 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 350
+        X: =555
+        Y: =540
+        ZIndex: =27
+
+    Star1_26 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 360
+        X: =575
+        Y: =560
+        ZIndex: =28
+
+    Star1_27 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 370
+        X: =595
+        Y: =580
+        ZIndex: =29
+
+    Star1_28 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 380
+        X: =615
+        Y: =600
+        ZIndex: =30
+
+    Star1_29 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 390
+        X: =635
+        Y: =620
+        ZIndex: =31
 
     Timer1 As timer:
         BorderColor: =App.Theme.Colors.Primary
@@ -109,7 +261,7 @@ Screen2 As screen:
         Start: =startTimer
         X: =581
         Y: =660
-        ZIndex: =13
+        ZIndex: =32
 
     ButtonCanvas1 As Button:
         DisplayMode: =DisplayMode.Edit
@@ -119,7 +271,7 @@ Screen2 As screen:
         Width: =96
         X: =315
         Y: =668
-        ZIndex: =14
+        ZIndex: =33
 
     ButtonCanvas1_1 As Button:
         DisplayMode: =DisplayMode.Edit
@@ -129,7 +281,7 @@ Screen2 As screen:
         Width: =96
         X: =436
         Y: =668
-        ZIndex: =15
+        ZIndex: =34
 
     ButtonCanvas1_2 As Button:
         DisplayMode: =DisplayMode.Edit
@@ -139,7 +291,7 @@ Screen2 As screen:
         Width: =96
         X: =784
         Y: =664
-        ZIndex: =16
+        ZIndex: =35
 
     ButtonCanvas2_1 As Button:
         DisplayMode: =DisplayMode.Edit
@@ -149,5 +301,4 @@ Screen2 As screen:
         Width: =96
         X: =39
         Y: =668
-        ZIndex: =17
-
+        ZIndex: =36
