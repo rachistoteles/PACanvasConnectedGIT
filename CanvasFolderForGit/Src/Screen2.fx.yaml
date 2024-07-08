@@ -2,7 +2,7 @@ Screen2 As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =//hello moto
+        =Set(timerVariable, 0)
 
     Star1 As star:
         BorderColor: =App.Theme.Colors.Darker40
