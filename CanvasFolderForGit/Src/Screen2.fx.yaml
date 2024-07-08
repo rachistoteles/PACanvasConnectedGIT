@@ -95,7 +95,39 @@ Screen2 As screen:
         PressedBorderColor: =App.Theme.Colors.Darker40
         PressedColor: =Self.Color
         PressedFill: =App.Theme.Colors.Darker40
-        X: =635
+        Repeat: =true
+        Start: =startTimer
+        X: =581
         Y: =660
         ZIndex: =13
+
+    ButtonCanvas1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(startTimer, true)
+        Text: ="Start"
+        Width: =96
+        X: =315
+        Y: =668
+        ZIndex: =14
+
+    ButtonCanvas1_1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(startTimer, false);
+        Text: ="Stop"
+        Width: =96
+        X: =436
+        Y: =668
+        ZIndex: =15
+
+    ButtonCanvas1_2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(startTimer, false); Reset(Timer1);
+        Text: ="Reset"
+        Width: =96
+        X: =784
+        Y: =664
+        ZIndex: =16
 
