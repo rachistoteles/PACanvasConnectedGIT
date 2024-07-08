@@ -40,6 +40,7 @@ Screen2 As screen:
     Star1_5 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =false
         X: =155
         Y: =140
         ZIndex: =7
