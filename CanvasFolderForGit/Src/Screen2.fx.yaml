@@ -7,6 +7,7 @@ Screen2 As screen:
     Star1 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 100
         X: =55
         Y: =40
         ZIndex: =2
@@ -14,6 +15,7 @@ Screen2 As screen:
     Star1_1 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 200
         X: =75
         Y: =60
         ZIndex: =3
@@ -21,6 +23,7 @@ Screen2 As screen:
     Star1_2 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 300
         X: =95
         Y: =80
         ZIndex: =4
@@ -28,6 +31,7 @@ Screen2 As screen:
     Star1_3 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 400
         X: =115
         Y: =100
         ZIndex: =5
@@ -35,6 +39,7 @@ Screen2 As screen:
     Star1_4 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 500
         X: =135
         Y: =120
         ZIndex: =6
@@ -42,7 +47,7 @@ Screen2 As screen:
     Star1_5 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        Visible: =false
+        Visible: =Timer1.Value >= 600
         X: =155
         Y: =140
         ZIndex: =7
@@ -50,6 +55,7 @@ Screen2 As screen:
     Star1_6 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 700
         X: =175
         Y: =160
         ZIndex: =8
@@ -57,6 +63,7 @@ Screen2 As screen:
     Star1_7 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 800
         X: =195
         Y: =180
         ZIndex: =9
@@ -64,6 +71,7 @@ Screen2 As screen:
     Star1_8 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 900
         X: =215
         Y: =200
         ZIndex: =10
@@ -71,6 +79,7 @@ Screen2 As screen:
     Star1_9 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
+        Visible: =Timer1.Value >= 1000
         X: =235
         Y: =220
         ZIndex: =11
@@ -78,8 +87,9 @@ Screen2 As screen:
     Star1_10 As star:
         BorderColor: =App.Theme.Colors.Darker40
         Fill: =App.Theme.Colors.Primary
-        X: =255
-        Y: =240
+        Visible: =Timer1.Value >= 1100
+        X: =235
+        Y: =220
         ZIndex: =12
 
     Timer1 As timer:
