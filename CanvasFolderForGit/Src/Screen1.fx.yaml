@@ -11,3 +11,13 @@ Screen1 As screen:
         Y: =40
         ZIndex: =1
 
+    ButtonCanvas2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Navigate(Screen2)
+        Text: ="Nav 2"
+        Width: =96
+        X: =55
+        Y: =295
+        ZIndex: =2
+
