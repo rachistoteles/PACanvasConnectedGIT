@@ -20,10 +20,12 @@ Screen4 As screen:
         ZIndex: =1
 
     Timer3 As timer:
+        AutoStart: =true
         BorderColor: =App.Theme.Colors.Primary
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =3000
         Fill: =App.Theme.Colors.Primary
         Font: =App.Theme.Font
         HoverBorderColor: =App.Theme.Colors.Darker10
