@@ -1,0 +1,225 @@
+Screen4 As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =Clear(FractalBranches);
+        ClearCollect(FractalBranches, { x: 0, y: 0, angle: 0, length: 100, iteration: 1 });
+        UpdateContext({ iteration: 1 });
+        Filter(FractalBranches, iteration =1);
+
+    ButtonCanvas6 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =34
+        OnSelect: |-
+            =ClearCollect(FractalBranches, 
+                {x: App.Width/8.8 / 2, y: App.Height/5.1, angle: -90, length: 100, iteration: 1});
+        Text: ="CreateCollection"
+        Width: =153
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Timer3 As timer:
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnTimerEnd: |
+            =If(
+                iteration <= 10, 
+                ClearCollect(
+                    TempCollection, 
+                    AddColumns(
+                        Filter(FractalBranches, iteration = iteration - 1), 
+                        'newX1', x + Cos(Radians(angle + 30)) * length * 0.67, 
+                        'newY1', y + Sin(Radians(angle + 30)) * length * 0.67, 
+                        'newAngle1', angle + 30, 
+                        'newLength1', length * 0.67, 
+                        'newX2', x + Cos(Radians(angle - 30)) * length * 0.67, 
+                        'newY2', y + Sin(Radians(angle - 30)) * length * 0.67, 
+                        'newAngle2', angle - 30, 
+                        'newLength2', length * 0.67, 
+                        'newIteration', iteration + 1
+                    )
+                );
+                Collect(
+                    FractalBranches, 
+                    {
+                        x: First(TempCollection).newX1, 
+                        y: First(TempCollection).newY1, 
+                        angle: First(TempCollection).newAngle1, 
+                        length: First(TempCollection).newLength1, 
+                        iteration: First(TempCollection).newIteration
+                    },
+                    {
+                        x: Last(TempCollection).newX2, 
+                        y: Last(TempCollection).newY2, 
+                        angle: Last(TempCollection).newAngle2, 
+                        length: Last(TempCollection).newLength2, 
+                        iteration: Last(TempCollection).newIteration
+                    }
+                );
+                UpdateContext({iteration: iteration + 1});
+            , 
+                Clear(FractalBranches);
+                UpdateContext({iteration: 1})
+            );
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Reset: =true
+        Start: =startTimer
+        X: =238
+        Y: =184
+        ZIndex: =2
+
+    ButtonCanvas7 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |
+            =UpdateContext({ startTimer: true });
+        Text: ="Start"
+        Width: =96
+        X: =97
+        Y: =142
+        ZIndex: =3
+
+    "Gallery1 As gallery.'BrowseLayout_Flexible_SocialFeed_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Items: =FractalBranches 
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =4
+        TemplateSize: =Min(870, Self.Height - 60)
+        X: =636
+        Y: =110
+        ZIndex: =4
+
+        ProfileImage1 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =64
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =64
+            X: =16
+            Y: =16
+            ZIndex: =1
+
+        Title1 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.x
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 112
+            X: =96
+            Y: =ProfileImage1.Y + (ProfileImage1.Height / 2) - (Self.Height / 2)
+            ZIndex: =2
+
+        Image1 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =Min(Self.Width, Parent.TemplateHeight - 180)
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.TemplateWidth - 32
+            X: =16
+            Y: =96
+            ZIndex: =3
+
+        Body1 As label:
+            AutoHeight: =true
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.angle
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            X: =16
+            Y: =Image1.Y + Image1.Height + 16
+            ZIndex: =4
+
+    ButtonCanvas7_1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |+
+            =UpdateContext({ startTimer: false });
+            Reset(Timer3);
+            
+            Clear(FractalBranches);
+            ClearCollect(FractalBranches, { x: 0, y: 0, angle: 0, length: 100, iteration: 1 });
+            UpdateContext({ iteration: 1 });
+            
+        Text: ="Reset"
+        Width: =96
+        X: =97
+        Y: =235
+        ZIndex: =5
+
+    ButtonCanvas7_2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |
+            =UpdateContext({ startTimer: false });
+        Text: ="Stop"
+        Width: =96
+        X: =97
+        Y: =188
+        ZIndex: =6
+
+    ButtonCanvas8 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Navigate(Screen3);
+        Text: ="Nav s3"
+        Width: =96
+        X: =40
+        Y: =565
+        ZIndex: =7
+
+    ButtonCanvas10 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: |
+            =Text(
+                RoundDown(Timer3.Value / 60000, 0) & ":" & 
+                Text(Mod(RoundDown(Timer1.Value / 1000, 0), 60), "[$-en-US]00") & ":" & 
+                Text(Mod(Timer3.Value, 1000), "[$-en-US]000")
+            )
+        Width: =96
+        X: =417
+        Y: =192
+        ZIndex: =8
+

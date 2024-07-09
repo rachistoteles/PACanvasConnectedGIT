@@ -1,0 +1,198 @@
+Screen3 As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    ButtonCanvas3 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =Set(varHeight, varHeight+60);Set(varWidth,App.Width);
+            Set(valuesChanger,{size:150,angle:0.4,scale:0.67,iterations:10,animate: true ,speed:0.3,offset:0,slices:13});
+        Text: ="arrayValues"
+        Width: =96
+        X: =855
+        Y: =15
+        ZIndex: =1
+
+    Container1 As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =221
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =316
+        X: =1035
+        ZIndex: =11
+
+        TextCanvas2_1 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: |
+                =Concatenate("Animate: ", Value(valuesChanger.animate))
+            Width: =96
+            X: =110
+            Y: =40
+            ZIndex: =1
+
+        TextCanvas2_2 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: |
+                =Concatenate("Iterations: ", Value(valuesChanger.iterations))
+            Width: =96
+            X: =110
+            Y: =60
+            ZIndex: =2
+
+        TextCanvas2_3 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: |
+                =Concatenate("Angle: ", Value(valuesChanger.angle))
+            Width: =96
+            X: =110
+            Y: =80
+            ZIndex: =3
+
+        TextCanvas2_4 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: |
+                =Concatenate("Slices: ", Value(valuesChanger.slices))
+            Width: =96
+            X: =110
+            Y: =100
+            ZIndex: =4
+
+        TextCanvas2_5 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: |
+                =Concatenate("Speed: ", Value(valuesChanger.speed))
+            Width: =96
+            X: =110
+            Y: =120
+            ZIndex: =5
+
+        TextCanvas2_6 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: |
+                =Concatenate("Size: ", Value(valuesChanger.size))
+            Width: =96
+            X: =110
+            Y: =137
+            ZIndex: =6
+
+        TextCanvas2_7 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: |
+                =Concatenate("Scale: ", Value(valuesChanger.scale))
+            Width: =96
+            X: =110
+            Y: =160
+            ZIndex: =7
+
+        TextCanvas2_8 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: |
+                =Concatenate("Offset: ", Value(valuesChanger.offset))
+            Width: =96
+            X: =110
+            Y: =180
+            ZIndex: =8
+
+    ButtonCanvas4 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =
+        Width: =96
+        X: =855
+        Y: =61
+        ZIndex: =12
+
+    Icon1 As icon.VerticalLine:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =App.Theme.Colors.Darker30
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =varHeight
+        Icon: =Icon.VerticalLine
+        Width: =Mod(RoundDown((Timer2.Value) / 1000, 10), 60)*100
+        X: =Slider1.Value
+        ZIndex: =13
+
+    Slider1 As Slider:
+        DisplayMode: =DisplayMode.Edit
+        Height: =35
+        OnChange: =Set(varHeight, varHeight+10);
+        Value: =0
+        Width: =200
+        X: =574
+        Y: =310
+        ZIndex: =14
+
+    Timer2 As timer:
+        AutoPause: =false
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnTimerEnd: =Set(varWidth, Mod(RoundDown(Self.Value / 1000, 0), 60)*10000);
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Repeat: =true
+        Start: =timerFalse
+        X: =920
+        Y: =510
+        ZIndex: =15
+
+    ButtonCanvas5 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(timerFalse, true);
+        Text: ="Start"
+        Width: =96
+        X: =759
+        Y: =459
+        ZIndex: =16
+
+    ButtonCanvas5_1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(timerFalse, false);
+        Text: ="Stop"
+        Width: =96
+        X: =759
+        Y: =510
+        ZIndex: =17
+
+    ButtonCanvas5_2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(timerFalse, false); Reset(Timer2);
+        Text: ="Reset"
+        Width: =96
+        X: =759
+        Y: =562
+        ZIndex: =18
+
+    ButtonCanvas9 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Navigate(Screen4);
+        Text: ="Nav 4"
+        Width: =96
+        X: =95
+        Y: =650
+        ZIndex: =19
+

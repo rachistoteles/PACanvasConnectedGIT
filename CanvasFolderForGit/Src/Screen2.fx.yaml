@@ -245,10 +245,12 @@ Screen2 As screen:
         ZIndex: =31
 
     Timer1 As timer:
+        AutoStart: =true
         BorderColor: =App.Theme.Colors.Primary
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =6000
         Fill: =App.Theme.Colors.Primary
         Font: =App.Theme.Font
         HoverBorderColor: =App.Theme.Colors.Darker10
@@ -302,4 +304,11 @@ Screen2 As screen:
         X: =39
         Y: =668
         ZIndex: =36
+
+    Star2 As star:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        X: =Timer1.Value
+        Y: =40
+        ZIndex: =37
 
