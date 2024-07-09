@@ -1,0 +1,73 @@
+JSONParserScreen As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    "TextInputCanvas1 As 'Text input'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =286
+        Mode: ='TextInputCanvas.Mode'.Multiline
+        Width: =538
+        X: =80
+        Y: =270
+        ZIndex: =1
+
+    Table1 As Table.pcfdataset:
+        DisplayMode: =DisplayMode.Edit
+        Height: =253
+        Items: =universalConstants
+        onCellValueChange: =false
+        onFilter: =false
+        onNavigate: =false
+        onRowSelect: =false
+        onSave: =false
+        OnSelect: =false
+        Width: =662
+        X: =665
+        Y: =395
+        ZIndex: =2
+
+        WaveEquation1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+            FieldDisplayName: ="WaveEquation"
+            FieldName: ="WaveEquation"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =2
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Units1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+            FieldDisplayName: ="Units"
+            FieldName: ="Units"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =2
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+    TextCanvas2 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =RGBA(0, 0, 0, 1)
+        Height: =244
+        Text: =fakeArray
+        Width: =470
+        X: =80
+        Y: =3
+        ZIndex: =3
+
+    ButtonCanvas11 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =Set(fakeArray,FlowTestApi.Run().tablevalues);Copy(fakeArray); Set(parsedJSON, ParseJSON(fakeArray));ClearCollect(universalConstants, ForAll(parsedJSON, {WaveEquation:  ThisRecord.WaveEquation, Units:Text(ThisRecord.Units), Derivation:ThisRecord.Derivation, UniversalWaveConstants: ThisRecord.UniversalWaveConstants}));
+        Text: ="JsonString"
+        Width: =96
+        X: =783
+        Y: =306
+        ZIndex: =4
+

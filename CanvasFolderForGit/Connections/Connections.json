@@ -1,1 +1,56 @@
-{}
+{
+  "312a90e1-4dfb-402c-a87d-c0a5d75a790e": {
+    "connectionRef": {
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1694/1.0.1694.3753/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "65530117-e310-427b-98e2-02693031a2f2"
+    ],
+    "id": "312a90e1-4dfb-402c-a87d-c0a5d75a790e"
+  },
+  "65530117-e310-427b-98e2-02693031a2f2": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "312a90e1-4dfb-402c-a87d-c0a5d75a790e": {
+          "value": "shared_excelonlinebusiness"
+        },
+        "workflowDisplayName": {
+          "value": "FlowTestApi"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "ffe955ca-a6e3-41d9-bca6-186c6acb9bc4"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_excelonlinebusiness": {
+          "value": "312a90e1-4dfb-402c-a87d-c0a5d75a790e"
+        },
+        "workflowDisplayName": {
+          "value": "FlowTestApi"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "ffe955ca-a6e3-41d9-bca6-186c6acb9bc4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "FlowTestApi"
+    ],
+    "dependencies": {
+      "shared_excelonlinebusiness": "312a90e1-4dfb-402c-a87d-c0a5d75a790e"
+    },
+    "dependents": [],
+    "id": "65530117-e310-427b-98e2-02693031a2f2"
+  }
+}

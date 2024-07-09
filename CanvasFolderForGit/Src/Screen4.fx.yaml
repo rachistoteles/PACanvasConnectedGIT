@@ -38,15 +38,15 @@ Screen4 As screen:
                     TempCollection, 
                     AddColumns(
                         Filter(FractalBranches, iteration = iteration - 1), 
-                        'newX1', x + Cos(Radians(angle + 30)) * length * 0.67, 
-                        'newY1', y + Sin(Radians(angle + 30)) * length * 0.67, 
-                        'newAngle1', angle + 30, 
-                        'newLength1', length * 0.67, 
-                        'newX2', x + Cos(Radians(angle - 30)) * length * 0.67, 
-                        'newY2', y + Sin(Radians(angle - 30)) * length * 0.67, 
-                        'newAngle2', angle - 30, 
-                        'newLength2', length * 0.67, 
-                        'newIteration', iteration + 1
+                        newX1, x + Cos(Radians(angle + 30)) * length * 0.67, 
+                        newY1, y + Sin(Radians(angle + 30)) * length * 0.67, 
+                        newAngle1, angle + 30, 
+                        newLength1, length * 0.67, 
+                        newX2, x + Cos(Radians(angle - 30)) * length * 0.67, 
+                        newY2, y + Sin(Radians(angle - 30)) * length * 0.67, 
+                        newAngle2, angle - 30, 
+                        newLength2, length * 0.67, 
+                        newIteration, iteration + 1
                     )
                 );
                 Collect(
